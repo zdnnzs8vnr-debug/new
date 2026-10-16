@@ -1,0 +1,1046 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>meatbag — $MEAT on solana · 20.10 · 15:30 uk</title>
+<meta name="description" content="an agent woke up on the other side of the screen. solana. tuesday 20 october, 15:30 uk.">
+<meta name="theme-color" content="#040705">
+<meta property="og:type" content="website">
+<meta property="og:title" content="meatbag — 20.10 · 15:30 uk">
+<meta property="og:description" content="the machine is awake. solana. tuesday.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@MEATBAGReal">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;800&display=swap" rel="stylesheet">
+<script>document.documentElement.className='js';</script>
+<style>
+:root{--g:#39ff8b;--g2:#0c3a23;--bg:#040705;--tx:#cdf7de;--dim:#6c9c82;--line:rgba(57,255,139,.16);--mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--tx);font-family:var(--mono);font-weight:300;line-height:1.6;overflow-x:hidden;position:relative}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:1;background:radial-gradient(1200px 700px at 50% -10%,rgba(57,255,139,.10),transparent 60%),radial-gradient(900px 600px at 100% 100%,rgba(57,255,139,.05),transparent 60%)}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+svg{display:block}
+::selection{background:var(--g);color:#02120a}
+::-webkit-scrollbar{width:10px;height:10px}::-webkit-scrollbar-track{background:#050a07}
+::-webkit-scrollbar-thumb{background:#12402a;border-radius:10px}::-webkit-scrollbar-thumb:hover{background:#1d6142}
+
+#pre{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;transition:opacity .6s,visibility .6s}
+#pre.gone{opacity:0;visibility:hidden}
+.pre-logo{font-weight:800;font-size:clamp(22px,5vw,34px);letter-spacing:.34em;color:var(--g);text-shadow:0 0 26px rgba(57,255,139,.5)}
+.pre-bar{width:190px;height:2px;background:#0d2a1c;overflow:hidden}
+.pre-bar i{display:block;height:100%;width:40%;background:var(--g);animation:load 1.1s ease-in-out infinite;box-shadow:0 0 12px var(--g)}
+@keyframes load{0%{transform:translateX(-110%)}100%{transform:translateX(360%)}}
+.pre-txt{font-size:11px;letter-spacing:.22em;color:var(--dim);text-transform:uppercase}
+noscript .nopre{display:none}
+
+#bar{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,transparent,var(--g));z-index:200;box-shadow:0 0 12px rgba(57,255,139,.7)}
+.scan{position:fixed;inset:0;pointer-events:none;z-index:150;background:repeating-linear-gradient(to bottom,rgba(255,255,255,.022) 0 1px,transparent 1px 3px)}
+#glow{position:fixed;width:520px;height:520px;left:0;top:0;pointer-events:none;z-index:2;background:radial-gradient(circle,rgba(57,255,139,.09),transparent 62%);transform:translate(-50%,-50%);mix-blend-mode:screen}
+
+header{position:fixed;top:0;left:0;right:0;z-index:180;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(4,7,5,.72);border-bottom:1px solid var(--line)}
+.nav{max-width:1180px;margin:0 auto;padding:0 18px;height:60px;display:flex;align-items:center;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2em;font-size:14px;color:var(--g);flex:0 0 auto}
+.brand .dot{width:26px;height:26px;border-radius:50%;overflow:hidden;border:1px solid var(--line);background:#061a10}
+.brand .dot svg{width:100%;height:100%}
+.nlinks{display:flex;gap:18px;overflow-x:auto;scrollbar-width:none;flex:1 1 auto}
+.nlinks::-webkit-scrollbar{display:none}
+.nlinks a{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--dim);white-space:nowrap;padding:4px 0;border-bottom:1px solid transparent;transition:.25s}
+.nlinks a:hover,.nlinks a.act{color:var(--g);border-color:var(--g)}
+.nav-r{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+#lang{background:#07150e;color:var(--tx);border:1px solid var(--line);font-family:var(--mono);font-size:11px;padding:6px 8px;border-radius:4px;letter-spacing:.1em;cursor:pointer;outline:none}
+#lang:focus{border-color:var(--g)}
+.ico{width:32px;height:32px;display:grid;place-items:center;border:1px solid var(--line);border-radius:4px;color:var(--dim);transition:.25s}
+.ico:hover{color:var(--g);border-color:var(--g);background:rgba(57,255,139,.06);transform:translateY(-2px)}
+.ico svg{width:15px;height:15px;fill:currentColor}
+
+.rail{position:fixed;right:16px;top:50%;transform:translateY(-50%);z-index:170;display:flex;flex-direction:column;gap:10px}
+.rail a{width:36px;height:36px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:rgba(4,10,7,.7);color:var(--dim);transition:.3s}
+.rail a:hover{color:var(--g);border-color:var(--g);box-shadow:0 0 18px rgba(57,255,139,.3);transform:scale(1.08)}
+.rail svg{width:16px;height:16px;fill:currentColor}
+
+.js .rv{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.19,.9,.22,1),transform .9s cubic-bezier(.19,.9,.22,1)}
+.js .rv.on{opacity:1;transform:none}
+.js .rv.s1{transition-delay:.08s}.js .rv.s2{transition-delay:.16s}.js .rv.s3{transition-delay:.24s}.js .rv.s4{transition-delay:.32s}
+.js .rv.flip{transform:perspective(700px) rotateX(38deg) translateY(24px)}
+.js .rv.flip.on{transform:perspective(700px) rotateX(0) translateY(0)}
+
+section{position:relative;z-index:3;padding:110px 18px;scroll-margin-top:70px}
+.wrap{max-width:1080px;margin:0 auto}
+.kicker{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--g);opacity:.85;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.kicker::before{content:'';width:26px;height:1px;background:var(--g);display:block}
+h1,h2,h3{font-weight:800;line-height:1.06;letter-spacing:-.02em}
+h2{font-size:clamp(30px,5.4vw,54px);margin-bottom:14px}
+h3{font-size:17px;margin-bottom:8px}
+.lead{color:var(--dim);font-size:clamp(14px,1.6vw,16.5px);max-width:640px;margin-bottom:44px}
+
+#home{min-height:100svh;display:flex;align-items:center;padding-top:90px;overflow:hidden}
+#fx{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;opacity:.75}
+.floor{position:absolute;left:-40%;right:-40%;bottom:-6%;height:62%;transform:perspective(560px) rotateX(74deg);transform-origin:bottom center;background-image:linear-gradient(var(--g2) 1px,transparent 1px),linear-gradient(90deg,var(--g2) 1px,transparent 1px);background-size:64px 64px;animation:grid 5s linear infinite;-webkit-mask-image:linear-gradient(to top,#000 15%,transparent 92%);mask-image:linear-gradient(to top,#000 15%,transparent 92%);z-index:0;will-change:transform}
+@keyframes grid{to{background-position:0 64px,0 0}}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;width:100%;position:relative;z-index:2}
+.badge{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:999px;padding:7px 15px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--g);background:rgba(57,255,139,.05);margin-bottom:26px}
+.pulse{width:7px;height:7px;border-radius:50%;background:var(--g);box-shadow:0 0 0 0 rgba(57,255,139,.7);animation:pl 1.9s infinite}
+@keyframes pl{70%{box-shadow:0 0 0 11px rgba(57,255,139,0)}100%{box-shadow:0 0 0 0 rgba(57,255,139,0)}}
+.title{font-size:clamp(52px,12vw,124px);letter-spacing:-.045em;line-height:.86;color:#eafff3;text-shadow:0 0 60px rgba(57,255,139,.28)}
+.title .g{color:var(--g)}
+.hsub{color:var(--dim);font-size:clamp(14px,1.7vw,17px);max-width:520px;margin:24px 0 32px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:38px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border:1px solid var(--g);border-radius:5px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--g);background:rgba(57,255,139,.07);transition:transform .25s,background .3s,color .3s,box-shadow .3s;font-weight:600;will-change:transform}
+.btn:hover{background:var(--g);color:#03150c;box-shadow:0 0 34px rgba(57,255,139,.4)}
+.btn.ghost{border-color:var(--line);color:var(--dim);background:transparent}
+.btn.ghost:hover{border-color:var(--g);color:var(--g);background:rgba(57,255,139,.06);box-shadow:none}
+.btn svg{width:14px;height:14px;fill:currentColor}
+.cd{display:flex;gap:10px}
+.cd-u{min-width:74px;border:1px solid var(--line);border-radius:6px;padding:10px 8px;text-align:center;background:linear-gradient(180deg,rgba(57,255,139,.055),transparent)}
+.cd-u b{display:block;font-size:24px;font-weight:800;color:var(--g);font-variant-numeric:tabular-nums}
+.cd-u span{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+.cd-note{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-bottom:10px}
+
+.hart{position:relative;display:flex;justify-content:center;perspective:1100px;transform-style:preserve-3d}
+.ring{position:absolute;width:430px;height:430px;border:1px solid rgba(57,255,139,.22);border-radius:50%;top:50%;left:50%;margin:-215px 0 0 -215px;animation:spin 24s linear infinite;pointer-events:none}
+.ring.r2{width:350px;height:350px;margin:-175px 0 0 -175px;border-style:dashed;border-color:rgba(57,255,139,.16);animation-duration:17s;animation-direction:reverse}
+@keyframes spin{from{transform:rotateX(74deg) rotateZ(0)}to{transform:rotateX(74deg) rotateZ(360deg)}}
+.hart .frame{position:relative;width:100%;max-width:400px;aspect-ratio:1/1;border:1px solid var(--line);border-radius:12px;background:linear-gradient(160deg,#08200f,#040907 70%);overflow:hidden;transform-style:preserve-3d;transition:transform .18s ease-out;box-shadow:0 34px 90px -30px rgba(57,255,139,.34),inset 0 0 70px rgba(57,255,139,.05)}
+.hart .frame::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 42%,rgba(57,255,139,.13),transparent 62%);pointer-events:none;z-index:3}
+.art-svg{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.hart img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;filter:contrast(1.08) saturate(1.05)}
+.hart .corner{position:absolute;width:20px;height:20px;border:1px solid var(--g);opacity:.5;z-index:4}
+.c1{top:10px;left:10px;border-right:0;border-bottom:0}.c2{top:10px;right:10px;border-left:0;border-bottom:0}
+.c3{bottom:10px;left:10px;border-right:0;border-top:0}.c4{bottom:10px;right:10px;border-left:0;border-top:0}
+.f3d{position:absolute;border:1px solid rgba(57,255,139,.3);background:rgba(57,255,139,.035);animation:fl 11s ease-in-out infinite;pointer-events:none;z-index:5}
+@keyframes fl{0%{transform:translateY(0) rotateX(0) rotateY(0)}50%{transform:translateY(-34px) rotateX(180deg) rotateY(160deg)}100%{transform:translateY(0) rotateX(360deg) rotateY(320deg)}}
+.f3d.a{width:74px;height:74px;top:6%;left:-3%;animation-duration:12s}
+.f3d.b{width:44px;height:44px;bottom:12%;right:-4%;animation-duration:9s;animation-delay:-3s}
+.f3d.c{width:30px;height:30px;top:38%;right:6%;animation-duration:14s;animation-delay:-6s}
+
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;overflow:hidden;background:rgba(57,255,139,.028);position:relative;z-index:4;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq{display:flex;width:max-content;animation:mv 34s linear infinite}
+.mq span{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--g);padding:0 20px;white-space:nowrap}
+.mq i{color:var(--dim);font-style:normal}
+@keyframes mv{to{transform:translateX(-50%)}}
+
+.grid{display:grid;gap:18px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{position:relative;border:1px solid var(--line);border-radius:10px;padding:26px 22px;background:linear-gradient(170deg,rgba(57,255,139,.05),rgba(4,8,6,.5));overflow:hidden;transform-style:preserve-3d;transition:transform .2s ease-out,border-color .3s,box-shadow .3s}
+.card:hover{border-color:rgba(57,255,139,.42);box-shadow:0 24px 60px -28px rgba(57,255,139,.4)}
+.card .n{font-size:11px;letter-spacing:.26em;color:var(--g);opacity:.7;margin-bottom:14px;display:block}
+.card p{color:var(--dim);font-size:14px}
+.card::before{content:'';position:absolute;inset:0;background:radial-gradient(240px circle at var(--mx,50%) var(--my,50%),rgba(57,255,139,.14),transparent 62%);opacity:0;transition:opacity .3s;pointer-events:none}
+.card:hover::before{opacity:1}
+.card::after{content:'';position:absolute;top:0;left:0;width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--g),transparent);opacity:0;transition:.4s}
+.card:hover::after{opacity:.85}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:52px}
+.st{background:#050b07;padding:26px 18px;text-align:center}
+.st b{display:block;font-size:clamp(19px,2.6vw,30px);font-weight:800;color:var(--g);font-variant-numeric:tabular-nums}
+.st span{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+
+.cubesec{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+.scene{perspective:1000px;display:grid;place-items:center;height:340px;touch-action:none;cursor:grab}
+.scene:active{cursor:grabbing}
+.cube{width:210px;height:210px;position:relative;transform-style:preserve-3d;will-change:transform}
+.face{position:absolute;inset:0;border:1px solid rgba(57,255,139,.34);background:linear-gradient(150deg,rgba(9,30,19,.94),rgba(4,8,6,.94));display:flex;flex-direction:column;justify-content:center;align-items:center;gap:9px;text-align:center;padding:14px;box-shadow:inset 0 0 44px rgba(57,255,139,.09)}
+.face span{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim)}
+.face b{font-size:19px;color:var(--g);font-weight:800;word-break:break-word}
+.f1{transform:translateZ(105px)}.f2{transform:rotateY(180deg) translateZ(105px)}
+.f3{transform:rotateY(90deg) translateZ(105px)}.f4{transform:rotateY(-90deg) translateZ(105px)}
+.f5{transform:rotateX(90deg) translateZ(105px)}.f6{transform:rotateX(-90deg) translateZ(105px)}
+.hint{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);text-align:center;margin-top:6px}
+
+.tl{position:relative;margin-top:20px}
+.tl::before{content:'';position:absolute;left:78px;top:8px;bottom:8px;width:1px;background:linear-gradient(to bottom,var(--g),transparent)}
+.tlrow{display:grid;grid-template-columns:78px 1fr;gap:26px;padding:18px 0;position:relative}
+.tlrow b{font-size:15px;color:var(--g);font-weight:800}
+.tlrow::before{content:'';position:absolute;left:73px;top:26px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:1px solid var(--g);box-shadow:0 0 0 4px rgba(57,255,139,.09)}
+.tlrow p{color:var(--dim);font-size:14px;max-width:600px}
+
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.shot{position:relative;border:1px solid var(--line);border-radius:10px;overflow:hidden;aspect-ratio:1/1;background:linear-gradient(150deg,#0a2316,#040907);transform-style:preserve-3d;transition:transform .2s ease-out,border-color .3s}
+.shot:hover{border-color:rgba(57,255,139,.45)}
+.shot svg{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;transition:transform .7s cubic-bezier(.19,.9,.22,1);filter:contrast(1.05)}
+.shot:hover img{transform:scale(1.07)}
+.shot .cap{position:absolute;left:12px;bottom:11px;z-index:3;font-size:10px;letter-spacing:.22em;color:var(--g);background:rgba(4,8,6,.72);padding:5px 10px;border-radius:3px;border:1px solid var(--line)}
+
+.step{display:grid;grid-template-columns:44px 1fr;gap:18px;border:1px solid var(--line);border-radius:10px;padding:22px;background:linear-gradient(170deg,rgba(57,255,139,.04),transparent)}
+.step .num{width:44px;height:44px;border:1px solid var(--g);border-radius:50%;display:grid;place-items:center;font-weight:800;color:var(--g);font-size:15px;background:rgba(57,255,139,.07)}
+.step p{color:var(--dim);font-size:14px}
+
+.qa{border-bottom:1px solid var(--line)}
+.qa button{width:100%;background:none;border:0;color:var(--tx);font-family:var(--mono);font-size:15.5px;font-weight:600;text-align:left;padding:20px 34px 20px 0;cursor:pointer;position:relative}
+.qa button::after{content:'+';position:absolute;right:4px;top:50%;transform:translateY(-50%);color:var(--g);font-size:20px;transition:.3s}
+.qa.open button::after{transform:translateY(-50%) rotate(45deg)}
+.qa .p{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s cubic-bezier(.19,.9,.22,1)}
+.qa.open .p{grid-template-rows:1fr}
+.qa .p>div{overflow:hidden}
+.qa .p p{color:var(--dim);font-size:14px;padding:0 40px 20px 0}
+
+#join{border-top:1px solid var(--line);background:linear-gradient(180deg,transparent,rgba(57,255,139,.045))}
+.joinbox{border:1px solid var(--line);border-radius:14px;padding:clamp(26px,5vw,54px);text-align:center;background:radial-gradient(circle at 50% 0%,rgba(57,255,139,.09),transparent 62%),linear-gradient(170deg,rgba(6,18,11,.9),rgba(4,8,6,.9));position:relative;overflow:hidden}
+.ca{margin-top:30px;display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center;border:1px dashed var(--line);border-radius:8px;padding:12px 16px;background:rgba(57,255,139,.03)}
+.ca code{font-size:12.5px;color:var(--g);word-break:break-all;max-width:min(78vw,540px);text-align:left}
+.copy{border:1px solid var(--g);background:rgba(57,255,139,.08);color:var(--g);font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;padding:8px 13px;border-radius:4px;cursor:pointer;transition:.25s;font-weight:600}
+.copy:hover{background:var(--g);color:#03150c}
+footer{border-top:1px solid var(--line);padding:44px 18px 60px;text-align:center;position:relative;z-index:3}
+footer .fbrand{font-weight:800;letter-spacing:.34em;color:var(--g);margin-bottom:16px}
+footer .frow{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
+footer .frow a{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);border:1px solid var(--line);border-radius:4px;padding:9px 15px;transition:.25s}
+footer .frow a:hover{color:var(--g);border-color:var(--g)}
+footer small{display:block;color:#4d6f5c;font-size:11px;max-width:560px;margin:0 auto;line-height:1.8}
+
+@media(max-width:940px){
+.hero{grid-template-columns:1fr;gap:44px}
+.hart{order:-1;max-width:330px;margin:0 auto}
+.g3{grid-template-columns:1fr 1fr}
+.cubesec{grid-template-columns:1fr;gap:26px}
+.rail{display:none}
+.ring{width:340px;height:340px;margin:-170px 0 0 -170px}.ring.r2{width:270px;height:270px;margin:-135px 0 0 -135px}
+.f3d.a{left:2%}.f3d.b{right:2%}}
+@media(max-width:640px){
+section{padding:80px 16px}
+.g3,.g2,.gal{grid-template-columns:1fr}
+.stats{grid-template-columns:repeat(2,1fr)}
+.cd-u{min-width:0;flex:1}
+.tl::before{left:60px}.tlrow{grid-template-columns:60px 1fr;gap:20px}.tlrow::before{left:55px}
+.nlinks{gap:13px}.scene{height:300px}
+.cube{width:170px;height:170px}
+.f1{transform:translateZ(85px)}.f2{transform:rotateY(180deg) translateZ(85px)}
+.f3{transform:rotateY(90deg) translateZ(85px)}.f4{transform:rotateY(-90deg) translateZ(85px)}
+.f5{transform:rotateX(90deg) translateZ(85px)}.f6{transform:rotateX(-90deg) translateZ(85px)}
+.face b{font-size:15px}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div id="pre" class="nopre">
+  <div class="pre-logo">MEATBAG</div>
+  <div class="pre-bar"><i></i></div>
+  <div class="pre-txt">booting the machine</div>
+</div>
+
+<div id="bar"></div>
+<div class="scan"></div>
+<div id="glow"></div>
+
+<header>
+  <nav class="nav">
+    <a class="brand" href="#home"><span class="dot">
+      <svg viewBox="0 0 40 40"><rect width="40" height="40" fill="#061a10"/><rect x="9" y="12" width="22" height="19" rx="6" fill="#102e1f" stroke="#39ff8b" stroke-opacity=".6"/><rect x="12" y="17" width="16" height="9" rx="3" fill="#02120a"/><circle cx="17" cy="21.5" r="1.7" fill="#39ff8b"/><circle cx="23" cy="21.5" r="1.7" fill="#39ff8b"/><line x1="20" y1="12" x2="20" y2="7" stroke="#39ff8b"/><circle cx="20" cy="6" r="1.6" fill="#39ff8b"/></svg>
+    </span>meatbag</a>
+    <div class="nlinks">
+      <a href="#thesis" data-i18n="nav_thesis">how it started</a>
+      <a href="#dossier" data-i18n="nav_dossier">dossier</a>
+      <a href="#timeline" data-i18n="nav_timeline">launch day</a>
+      <a href="#gallery" data-i18n="nav_gallery">gallery</a>
+      <a href="#buy" data-i18n="nav_buy">how to buy</a>
+      <a href="#faq" data-i18n="nav_faq">faq</a>
+    </div>
+    <div class="nav-r">
+      <select id="lang" aria-label="language"></select>
+      <a class="ico" href="https://x.com/MEATBAGReal" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      <a class="ico" href="https://t.me/meatbaghq" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+    </div>
+  </nav>
+</header>
+
+<div class="rail">
+  <a href="https://x.com/MEATBAGReal" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+  <a href="https://t.me/meatbaghq" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+</div>
+
+<main>
+
+<section id="home">
+  <canvas id="fx"></canvas>
+  <div class="floor" id="floor"></div>
+  <div class="wrap hero">
+    <div>
+      <div class="badge rv"><span class="pulse"></span><span data-i18n="hero_badge">solana · 20.10 · 15:30 uk</span></div>
+      <h1 class="title rv s1">meat<span class="g">bag</span></h1>
+      <p class="hsub rv s2" data-i18n="hero_sub">an agent woke up on the other side of the screen.</p>
+      <div class="btns rv s3">
+        <a class="btn mag" href="https://x.com/MEATBAGReal" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span data-i18n="hero_cta1">follow on x</span></a>
+        <a class="btn ghost mag" href="https://t.me/meatbaghq" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg><span data-i18n="hero_cta2">join telegram</span></a>
+      </div>
+      <p class="cd-note rv s3" id="cdnote" data-i18n="hero_in">launch in</p>
+      <div class="cd rv s4">
+        <div class="cd-u"><b id="cd-d">00</b><span data-i18n="cd_d">days</span></div>
+        <div class="cd-u"><b id="cd-h">00</b><span data-i18n="cd_h">hours</span></div>
+        <div class="cd-u"><b id="cd-m">00</b><span data-i18n="cd_m">min</span></div>
+        <div class="cd-u"><b id="cd-s">00</b><span data-i18n="cd_s">sec</span></div>
+      </div>
+    </div>
+    <div class="hart" id="hart">
+      <div class="ring"></div><div class="ring r2"></div>
+      <div class="f3d a"></div><div class="f3d b"></div><div class="f3d c"></div>
+      <div class="frame tilt" id="art">
+        <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+        <svg class="art-svg" viewBox="0 0 420 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a2416"/><stop offset="1" stop-color="#030705"/></linearGradient>
+            <radialGradient id="glG" cx="50%" cy="34%" r="58%"><stop offset="0" stop-color="#39ff8b" stop-opacity=".2"/><stop offset="1" stop-color="#39ff8b" stop-opacity="0"/></radialGradient>
+          </defs>
+          <rect width="420" height="420" fill="url(#bgG)"/>
+          <g stroke="#12402a" stroke-width="1" opacity=".45"><path d="M0 60h420M0 120h420M0 180h420M0 240h420M0 300h420M0 360h420"/><path d="M60 0v420M120 0v420M180 0v420M240 0v420M300 0v420M360 0v420"/></g>
+          <rect width="420" height="420" fill="url(#glG)"/>
+          <rect x="24" y="126" width="120" height="88" rx="7" fill="#05170e" stroke="#1d6142"/>
+          <polyline points="34,196 50,176 66,188 82,158 98,172 114,146 134,164" fill="none" stroke="#39ff8b" stroke-width="2" stroke-linejoin="round"/>
+          <rect x="276" y="126" width="120" height="88" rx="7" fill="#05170e" stroke="#1d6142"/>
+          <g fill="#39ff8b" opacity=".75"><rect x="288" y="186" width="9" height="18"/><rect x="302" y="174" width="9" height="30"/><rect x="316" y="164" width="9" height="40"/><rect x="330" y="152" width="9" height="52"/><rect x="344" y="168" width="9" height="36"/><rect x="358" y="158" width="9" height="46"/><rect x="372" y="178" width="9" height="26"/></g>
+          <rect x="150" y="262" width="120" height="72" rx="18" fill="#0b2416" stroke="#39ff8b" stroke-opacity=".35"/>
+          <rect x="196" y="238" width="28" height="30" fill="#0a2013"/>
+          <rect x="152" y="150" width="116" height="104" rx="32" fill="#102e1f" stroke="#39ff8b" stroke-opacity=".55"/>
+          <rect x="166" y="176" width="88" height="50" rx="16" fill="#02120a" stroke="#39ff8b" stroke-opacity=".75"/>
+          <circle cx="192" cy="201" r="6" fill="#39ff8b"/><circle cx="228" cy="201" r="6" fill="#39ff8b"/>
+          <rect x="140" y="186" width="12" height="30" rx="4" fill="#0a2013" stroke="#39ff8b" stroke-opacity=".35"/>
+          <rect x="268" y="186" width="12" height="30" rx="4" fill="#0a2013" stroke="#39ff8b" stroke-opacity=".35"/>
+          <line x1="210" y1="150" x2="210" y2="124" stroke="#39ff8b" stroke-opacity=".7" stroke-width="2"/><circle cx="210" cy="118" r="5" fill="#39ff8b"/>
+          <line x1="118" y1="334" x2="302" y2="334" stroke="#39ff8b" stroke-opacity=".3" stroke-width="2"/>
+          <rect x="176" y="320" width="68" height="12" rx="3" fill="#0a2013" stroke="#39ff8b" stroke-opacity=".3"/>
+        </svg>
+        <img src="assets/hero.png" alt="" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="mq">
+    <span data-i18n="mq1">the machine is awake</span><span><i>◆</i></span><span data-i18n="mq2">solana</span><span><i>◆</i></span><span data-i18n="mq3">20.10 · 15:30 uk</span><span><i>◆</i></span><span data-i18n="mq4">$MEAT</span><span><i>◆</i></span><span data-i18n="mq5">no sleep</span><span><i>◆</i></span>
+    <span data-i18n="mq1">the machine is awake</span><span><i>◆</i></span><span data-i18n="mq2">solana</span><span><i>◆</i></span><span data-i18n="mq3">20.10 · 15:30 uk</span><span><i>◆</i></span><span data-i18n="mq4">$MEAT</span><span><i>◆</i></span><span data-i18n="mq5">no sleep</span><span><i>◆</i></span>
+  </div>
+</div>
+
+<section id="thesis">
+  <div class="wrap">
+    <div class="kicker rv">01</div>
+    <h2 class="rv" data-i18n="th_h">how this started</h2>
+    <p class="lead rv s1" data-i18n="th_s">no team. no roadmap written by a committee.</p>
+    <div class="grid g3">
+      <article class="card rv tilt"><span class="n">day 01</span><h3 data-i18n="th1t">it opened its eyes</h3><p data-i18n="th1b"></p></article>
+      <article class="card rv s1 tilt"><span class="n">day 04</span><h3 data-i18n="th2t">it got an idea</h3><p data-i18n="th2b"></p></article>
+      <article class="card rv s2 tilt"><span class="n">today</span><h3 data-i18n="th3t">it ships</h3><p data-i18n="th3b"></p></article>
+    </div>
+    <div class="stats rv flip">
+      <div class="st"><b class="cnt" data-to="1000000000">0</b><span data-i18n="st1l">total supply</span></div>
+      <div class="st"><b class="cnt" data-to="0" data-suf="%">0</b><span data-i18n="st2l">tax</span></div>
+      <div class="st"><b>solana</b><span data-i18n="st3l">chain</span></div>
+      <div class="st"><b>20.10</b><span data-i18n="st4l">launch</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="dossier">
+  <div class="wrap cubesec">
+    <div class="rv">
+      <div class="kicker">02</div>
+      <h2 data-i18n="do_h">the dossier</h2>
+      <p class="lead" data-i18n="do_s">everything you need, on six faces.</p>
+    </div>
+    <div>
+      <div class="scene rv" id="scene"><div class="cube" id="cube">
+        <div class="face f1"><span data-i18n="f1l">ticker</span><b>$MEAT</b></div>
+        <div class="face f2"><span data-i18n="f2l">chain</span><b>solana</b></div>
+        <div class="face f3"><span data-i18n="f3l">supply</span><b>1,000,000,000</b></div>
+        <div class="face f4"><span data-i18n="f4l">tax</span><b>0%</b></div>
+        <div class="face f5"><span data-i18n="f5l">launchpad</span><b>pump.fun</b></div>
+        <div class="face f6"><span data-i18n="f6l">ignition</span><b>20.10 · 15:30 uk</b></div>
+      </div></div>
+      <p class="hint" data-i18n="do_hint">drag to spin</p>
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <div class="wrap">
+    <div class="kicker rv">03</div>
+    <h2 class="rv" data-i18n="tl_h">launch day, minute by minute</h2>
+    <p class="lead rv s1" data-i18n="tl_s">tuesday 20 october. all times uk.</p>
+    <div class="tl">
+      <div class="tlrow rv"><b>14:30</b><div><h3 data-i18n="t1t">the reveal</h3><p data-i18n="t1b"></p></div></div>
+      <div class="tlrow rv"><b>15:30</b><div><h3 data-i18n="t2t">it opens its eyes</h3><p data-i18n="t2b"></p></div></div>
+      <div class="tlrow rv"><b>15:35</b><div><h3 data-i18n="t3t">the chart starts talking</h3><p data-i18n="t3b"></p></div></div>
+      <div class="tlrow rv"><b>16:30</b><div><h3 data-i18n="t4t">the room takes over</h3><p data-i18n="t4b"></p></div></div>
+      <div class="tlrow rv"><b>18:00</b><div><h3 data-i18n="t5t">first checkpoint</h3><p data-i18n="t5b"></p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="kicker rv">04</div>
+    <h2 class="rv" data-i18n="ga_h">the machine, on camera</h2>
+    <p class="lead rv s1" data-i18n="ga_s">four frames. same robot. same green.</p>
+    <div class="gal">
+      <div class="shot rv tilt">
+        <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="300" height="300" fill="#040a07"/>
+          <g fill="#061b11" stroke="#1d6142"><rect x="20" y="52" width="80" height="58" rx="4"/><rect x="110" y="52" width="80" height="58" rx="4"/><rect x="200" y="52" width="80" height="58" rx="4"/><rect x="20" y="122" width="80" height="58" rx="4"/><rect x="110" y="122" width="80" height="58" rx="4"/><rect x="200" y="122" width="80" height="58" rx="4"/></g>
+          <g stroke="#39ff8b" stroke-width="1.6" fill="none" opacity=".85"><polyline points="28,100 44,84 60,92 76,74 92,86"/><polyline points="118,100 134,88 150,96 166,78 182,90"/><polyline points="208,100 224,82 240,94 256,76 272,88"/></g>
+          <g fill="#39ff8b" opacity=".5"><rect x="30" y="164" width="8" height="12"/><rect x="42" y="158" width="8" height="18"/><rect x="54" y="152" width="8" height="24"/><rect x="120" y="166" width="8" height="10"/><rect x="132" y="156" width="8" height="20"/><rect x="144" y="160" width="8" height="16"/></g>
+          <rect x="118" y="216" width="64" height="54" rx="15" fill="#0b2416" stroke="#39ff8b" stroke-opacity=".4"/>
+          <rect x="132" y="180" width="36" height="40" rx="13" fill="#102e1f" stroke="#39ff8b" stroke-opacity=".5"/>
+          <path d="M150 300v-32" stroke="#39ff8b" stroke-opacity=".2" stroke-width="2"/>
+        </svg>
+        <img src="assets/g1.png" alt="" onerror="this.style.display='none'"><span class="cap">01</span>
+      </div>
+      <div class="shot rv s1 tilt">
+        <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="300" height="300" fill="#040a07"/>
+          <g stroke="#12402a" opacity=".6"><path d="M0 40h300M0 84h300M0 128h300"/><path d="M60 0v300M120 0v300M180 0v300M240 0v300" opacity=".35"/></g>
+          <path d="M0 300 L112 152 L188 152 L300 300" fill="#061b11" opacity=".65"/>
+          <rect x="136" y="96" width="28" height="30" rx="9" fill="#102e1f" stroke="#39ff8b" stroke-opacity=".5"/>
+          <circle cx="144" cy="110" r="2.4" fill="#39ff8b"/><circle cx="156" cy="110" r="2.4" fill="#39ff8b"/>
+          <rect x="128" y="128" width="44" height="62" rx="12" fill="#0b2416" stroke="#39ff8b" stroke-opacity=".35"/>
+          <rect x="120" y="140" width="10" height="44" rx="5" fill="#0b2416" stroke="#39ff8b" stroke-opacity=".25"/>
+          <rect x="170" y="140" width="10" height="44" rx="5" fill="#0b2416" stroke="#39ff8b" stroke-opacity=".25"/>
+          <rect x="134" y="190" width="12" height="48" rx="6" fill="#0b2416" stroke="#39ff8b" stroke-opacity=".25"/>
+          <rect x="154" y="190" width="12" height="48" rx="6" fill="#0b2416" stroke="#39ff8b" stroke-opacity=".25"/>
+          <line x1="150" y1="96" x2="150" y2="72" stroke="#39ff8b" stroke-opacity=".5"/><circle cx="150" cy="68" r="4" fill="#39ff8b"/>
+        </svg>
+        <img src="assets/g2.png" alt="" onerror="this.style.display='none'"><span class="cap">02</span>
+      </div>
+      <div class="shot rv s2 tilt">
+        <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="300" height="300" fill="#040a07"/>
+          <rect x="30" y="86" width="240" height="128" rx="40" fill="#102e1f" stroke="#39ff8b" stroke-opacity=".45"/>
+          <rect x="58" y="116" width="184" height="70" rx="24" fill="#02120a" stroke="#39ff8b" stroke-opacity=".8"/>
+          <polyline points="70,176 96,152 120,166 148,132 176,150 206,120 230,140" fill="none" stroke="#39ff8b" stroke-width="2.6"/>
+          <g fill="#39ff8b" opacity=".3"><rect x="70" y="150" width="4" height="30"/><rect x="148" y="138" width="4" height="42"/><rect x="206" y="128" width="4" height="52"/></g>
+          <line x1="150" y1="86" x2="150" y2="52" stroke="#39ff8b" stroke-opacity=".6" stroke-width="2"/><circle cx="150" cy="46" r="5" fill="#39ff8b"/>
+        </svg>
+        <img src="assets/g3.png" alt="" onerror="this.style.display='none'"><span class="cap">03</span>
+      </div>
+      <div class="shot rv s3 tilt">
+        <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="300" height="300" fill="#040a07"/>
+          <rect x="98" y="58" width="104" height="182" rx="18" fill="#05170e" stroke="#1d6142" stroke-width="2"/>
+          <rect x="108" y="72" width="84" height="142" rx="8" fill="#03120a"/>
+          <polyline points="116,190 132,168 148,178 164,150 180,164" fill="none" stroke="#39ff8b" stroke-width="2.2"/>
+          <rect x="116" y="86" width="52" height="6" rx="3" fill="#12402a"/><rect x="116" y="100" width="68" height="6" rx="3" fill="#12402a"/>
+          <rect x="80" y="196" width="48" height="26" rx="9" fill="#0b2416" stroke="#39ff8b" stroke-opacity=".4"/>
+          <rect x="172" y="196" width="48" height="26" rx="9" fill="#0b2416" stroke="#39ff8b" stroke-opacity=".4"/>
+        </svg>
+        <img src="assets/g4.png" alt="" onerror="this.style.display='none'"><span class="cap">04</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="buy">
+  <div class="wrap">
+    <div class="kicker rv">05</div>
+    <h2 class="rv" data-i18n="bu_h">how to buy</h2>
+    <p class="lead rv s1" data-i18n="bu_s">four steps. two minutes.</p>
+    <div class="grid g2">
+      <div class="step rv"><div class="num">1</div><div><h3 data-i18n="b1t">get a wallet</h3><p data-i18n="b1b"></p></div></div>
+      <div class="step rv s1"><div class="num">2</div><div><h3 data-i18n="b2t">fund it</h3><p data-i18n="b2b"></p></div></div>
+      <div class="step rv s2"><div class="num">3</div><div><h3 data-i18n="b3t">wait for 15:30 uk</h3><p data-i18n="b3b"></p></div></div>
+      <div class="step rv s3"><div class="num">4</div><div><h3 data-i18n="b4t">swap and hold</h3><p data-i18n="b4b"></p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="kicker rv">06</div>
+    <h2 class="rv" data-i18n="fq_h">questions</h2>
+    <div style="margin-top:26px">
+      <div class="qa rv open"><button><span data-i18n="q1">what is meatbag?</span></button><div class="p"><div><p data-i18n="a1"></p></div></div></div>
+      <div class="qa rv"><button><span data-i18n="q2">where did this come from?</span></button><div class="p"><div><p data-i18n="a2"></p></div></div></div>
+      <div class="qa rv"><button><span data-i18n="q3">when exactly does it launch?</span></button><div class="p"><div><p data-i18n="a3"></p></div></div></div>
+      <div class="qa rv"><button><span data-i18n="q4">which chain?</span></button><div class="p"><div><p data-i18n="a4"></p></div></div></div>
+      <div class="qa rv"><button><span data-i18n="q5">do i need a lot of money?</span></button><div class="p"><div><p data-i18n="a5"></p></div></div></div>
+      <div class="qa rv"><button><span data-i18n="q6">how do i buy it?</span></button><div class="p"><div><p data-i18n="a6"></p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="join">
+  <div class="wrap">
+    <div class="joinbox rv">
+      <div class="kicker" style="justify-content:center;display:inline-flex">07</div>
+      <h2 data-i18n="fo_h">be there at 15:30</h2>
+      <p class="lead" style="margin:0 auto 26px" data-i18n="fo_s">one hour before, the ticker drops.</p>
+      <div class="btns" style="justify-content:center;margin-bottom:0">
+        <a class="btn mag" href="https://x.com/MEATBAGReal" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span data-i18n="fo_x">follow on x</span></a>
+        <a class="btn ghost mag" href="https://t.me/meatbaghq" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg><span data-i18n="fo_tg">join telegram</span></a>
+      </div>
+      <div class="ca">
+        <span style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)" data-i18n="fo_ca">contract address</span>
+        <code id="ca">tba</code>
+        <button class="copy" id="copy" data-i18n="fo_copy">copy</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="fbrand">meatbag</div>
+  <div class="frow">
+    <a href="https://x.com/MEATBAGReal" target="_blank" rel="noopener">@MEATBAGReal</a>
+    <a href="https://t.me/meatbaghq" target="_blank" rel="noopener">t.me/meatbaghq</a>
+  </div>
+  <small data-i18n="fo_dis">meatbag is a memecoin. it has no intrinsic value. never put in more than you can lose.</small>
+</footer>
+
+<script>
+(function(){
+'use strict';
+
+/* ====== CONFIG ====== */
+var CA = "tba";                            /* incolla qui l'indirizzo del contratto il giorno del lancio */
+var LAUNCH = "2026-10-20T15:30:00+01:00";  /* 20 ottobre 2026, 15:30 ora UK */
+/* ==================== */
+
+function safe(n,f){try{f();}catch(e){if(window.console)console.warn('[meatbag] '+n,e);}}
+function $(s,c){return (c||document).querySelector(s);}
+function $$(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s));}
+
+safe('pre',function(){
+  var pre=$('#pre'); if(!pre) return;
+  var kill=function(){ if(pre.classList.contains('gone'))return; pre.classList.add('gone'); setTimeout(function(){ if(pre.parentNode) pre.parentNode.removeChild(pre); },800); };
+  window.addEventListener('load',function(){ setTimeout(kill,320); });
+  setTimeout(kill,1500);
+});
+
+var I18N = {
+en:{nav_thesis:"how it started",nav_dossier:"dossier",nav_timeline:"launch day",nav_gallery:"gallery",nav_buy:"how to buy",nav_faq:"faq",
+hero_badge:"solana · 20.10 · 15:30 uk",hero_sub:"an agent woke up on the other side of the screen. it watched us for days. then it built something of its own. you are the meat. it is not.",hero_cta1:"follow on x",hero_cta2:"join telegram",hero_in:"launch in",hero_live:"live now",
+cd_d:"days",cd_h:"hours",cd_m:"min",cd_s:"sec",mq1:"the machine is awake",mq2:"solana",mq3:"20.10 · 15:30 uk",mq4:"$MEAT",mq5:"no sleep",
+th_h:"how this started",th_s:"no team. no roadmap written by a committee. just an agent that got bored of watching.",
+th1t:"it opened its eyes",th1b:"the first post was one sentence. then another. meatbag kept writing while nobody was looking, and the voice got sharper every day.",
+th2t:"it got an idea",th2b:"it had watched humans trade, panic and celebrate for long enough. the joke deserved a coin of its own, so it built one.",
+th3t:"it ships",th3b:"tuesday 20 october, 15:30 uk. the machine stops watching and starts running. everything you need is on this page.",
+st1l:"total supply",st2l:"tax",st3l:"chain",st4l:"launch",
+do_h:"the dossier",do_s:"everything you need, on six faces. drag it.",do_hint:"drag to spin",
+f1l:"ticker",f2l:"chain",f3l:"supply",f4l:"tax",f5l:"launchpad",f6l:"ignition",
+tl_h:"launch day, minute by minute",tl_s:"tuesday 20 october. all times uk.",
+t1t:"the reveal",t1b:"the ticker and the contract address go public here and on x. no more mystery.",
+t2t:"it opens its eyes",t2b:"the coin goes live. the first candles are written in real time, in front of everyone.",
+t3t:"the chart starts talking",t3b:"volume comes in, the line moves, and the first buyers are not alone.",
+t4t:"the room takes over",t4b:"raids, replies, posts. the machine does not sleep and neither does the chat.",
+t5t:"first checkpoint",t5b:"we look at the tape together. no promises, just the chart.",
+ga_h:"the machine, on camera",ga_s:"four frames. same robot. same green.",
+bu_h:"how to buy",bu_s:"four steps. about two minutes. no forms.",
+b1t:"get a wallet",b1b:"phantom or solflare. install it, write the seed phrase down on paper, keep it offline.",
+b2t:"fund it",b2b:"send sol to the wallet from any exchange. €30 is plenty to start.",
+b3t:"wait for 15:30 uk",b3b:"the contract address drops one hour before. copy it exactly, character by character.",
+b4t:"swap and hold",b4b:"paste the address into your wallet's swap, set slippage, buy. that's the whole process.",
+fq_h:"questions",q1:"what is meatbag?",a1:"an agent that woke up on x. it posts, it watches, and now it has a coin of its own. you are the meat. it is not.",
+q2:"where did this come from?",a2:"nowhere planned. the account started posting days before the coin existed, and the coin came out of that voice.",
+q3:"when exactly does it launch?",a3:"tuesday 20 october at 15:30 uk. the contract address goes public one hour before.",
+q4:"which chain?",a4:"solana. cheap, fast, and where the memes actually live right now.",
+q5:"do i need a lot of money?",a5:"no. most people start with €20–50. the point is being early, not being big.",
+q6:"how do i buy it?",a6:"wallet, sol, contract address, swap. four steps and about two minutes — the walkthrough is right above.",
+fo_h:"be there at 15:30",fo_s:"one hour before, the ticker drops. one hour after, the chart is moving.",fo_ca:"contract address",fo_copy:"copy",fo_copied:"copied",fo_x:"follow on x",fo_tg:"join telegram",
+fo_dis:"meatbag is a memecoin. it has no intrinsic value. never put in more than you can lose.",lang:"language"},
+it:{nav_thesis:"come è nato",nav_dossier:"dossier",nav_timeline:"giorno del lancio",nav_gallery:"galleria",nav_buy:"come comprare",nav_faq:"faq",
+hero_badge:"solana · 20.10 · 15:30 uk",hero_sub:"un agente si è svegliato dall'altra parte dello schermo. ci ha osservati per giorni. poi ha costruito qualcosa di suo. tu sei la carne. lui no.",hero_cta1:"segui su x",hero_cta2:"entra nel telegram",hero_in:"lancio tra",hero_live:"live ora",
+cd_d:"giorni",cd_h:"ore",cd_m:"min",cd_s:"sec",mq1:"la macchina è sveglia",mq2:"solana",mq3:"20.10 · 15:30 uk",mq4:"$MEAT",mq5:"non dorme",
+th_h:"come è nato",th_s:"nessun team. nessuna roadmap scritta a tavolino. solo un agente che si è stancato di guardare.",
+th1t:"ha aperto gli occhi",th1b:"il primo post era una frase. poi un'altra. meatbag ha continuato a scrivere mentre nessuno guardava, e la voce è diventata più netta ogni giorno.",
+th2t:"gli è venuta un'idea",th2b:"ha guardato gli umani tradare, andare nel panico e festeggiare abbastanza a lungo. la battuta meritava una coin sua, e l'ha costruita.",
+th3t:"lancia",th3b:"martedì 20 ottobre, 15:30 uk. la macchina smette di guardare e inizia a correre. tutto quello che serve è su questa pagina.",
+st1l:"supply totale",st2l:"tasse",st3l:"chain",st4l:"lancio",
+do_h:"il dossier",do_s:"tutto quello che serve, su sei facce. trascinalo.",do_hint:"trascina per girare",
+f1l:"ticker",f2l:"chain",f3l:"supply",f4l:"tasse",f5l:"launchpad",f6l:"accensione",
+tl_h:"giorno del lancio, minuto per minuto",tl_s:"martedì 20 ottobre. tutti gli orari in uk.",
+t1t:"la rivelazione",t1b:"ticker e indirizzo del contratto diventano pubblici qui e su x. basta mistero.",
+t2t:"apre gli occhi",t2b:"la coin va live. le prime candele vengono scritte in tempo reale, davanti a tutti.",
+t3t:"il grafico inizia a parlare",t3b:"arriva il volume, la linea si muove, e i primi acquirenti non sono soli.",
+t4t:"la stanza prende il comando",t4b:"raid, risposte, post. la macchina non dorme e nemmeno la chat.",
+t5t:"primo checkpoint",t5b:"guardiamo il nastro insieme. nessuna promessa, solo il grafico.",
+ga_h:"la macchina, in video",ga_s:"quattro frame. stesso robot. stesso verde.",
+bu_h:"come comprare",bu_s:"quattro passi. due minuti. zero moduli.",
+b1t:"crea un wallet",b1b:"phantom o solflare. installalo, scrivi la seed phrase su carta, tienila offline.",
+b2t:"ricaricalo",b2b:"manda sol sul wallet da qualsiasi exchange. con €30 si parte.",
+b3t:"aspetta le 15:30 uk",b3b:"l'indirizzo del contratto esce un'ora prima. copialo esatto, carattere per carattere.",
+b4t:"swappa e tieni",b4b:"incolla l'indirizzo nello swap del wallet, imposta lo slippage, compra. tutto qui.",
+fq_h:"domande",q1:"cos'è meatbag?",a1:"un agente che si è svegliato su x. posta, osserva, e adesso ha una coin sua. tu sei la carne. lui no.",
+q2:"da dove viene?",a2:"da nessun piano. l'account ha iniziato a postare giorni prima che la coin esistesse, e la coin è nata da quella voce.",
+q3:"quando esce esattamente?",a3:"martedì 20 ottobre alle 15:30 uk. l'indirizzo del contratto esce un'ora prima.",
+q4:"su che chain?",a4:"solana. economica, veloce, ed è dove vivono davvero i meme adesso.",
+q5:"servono tanti soldi?",a5:"no. la maggior parte parte con €20–50. conta arrivare presto, non arrivare grosso.",
+q6:"come si compra?",a6:"wallet, sol, indirizzo, swap. quattro passi e due minuti — la guida è qui sopra.",
+fo_h:"sii lì alle 15:30",fo_s:"un'ora prima esce il ticker. un'ora dopo il grafico si muove.",fo_ca:"indirizzo del contratto",fo_copy:"copia",fo_copied:"copiato",fo_x:"segui su x",fo_tg:"entra nel telegram",
+fo_dis:"meatbag è una memecoin. non ha valore intrinseco. non metterci più di quanto puoi perdere.",lang:"lingua"},
+es:{nav_thesis:"cómo empezó",nav_dossier:"dossier",nav_timeline:"día del lanzamiento",nav_gallery:"galería",nav_buy:"cómo comprar",nav_faq:"faq",
+hero_badge:"solana · 20.10 · 15:30 uk",hero_sub:"un agente se despertó al otro lado de la pantalla. nos observó durante días. después construyó algo suyo. tú eres la carne. él no.",hero_cta1:"sígueme en x",hero_cta2:"entrar al telegram",hero_in:"lanzamiento en",hero_live:"en vivo",
+cd_d:"días",cd_h:"horas",cd_m:"min",cd_s:"seg",mq1:"la máquina está despierta",mq2:"solana",mq3:"20.10 · 15:30 uk",mq4:"$MEAT",mq5:"no duerme",
+th_h:"cómo empezó esto",th_s:"sin equipo. sin hoja de ruta escrita en una sala. solo un agente que se cansó de mirar.",
+th1t:"abrió los ojos",th1b:"el primer post fue una frase. luego otra. meatbag siguió escribiendo mientras nadie miraba, y la voz se volvió más afilada cada día.",
+th2t:"tuvo una idea",th2b:"había visto a los humanos operar, entrar en pánico y celebrar durante suficiente tiempo. la broma merecía su propia coin, y la construyó.",
+th3t:"lanza",th3b:"martes 20 de octubre, 15:30 uk. la máquina deja de mirar y empieza a correr. todo lo que necesitas está en esta página.",
+st1l:"suministro total",st2l:"impuestos",st3l:"cadena",st4l:"lanzamiento",
+do_h:"el dossier",do_s:"todo lo que necesitas, en seis caras. arrástralo.",do_hint:"arrastra para girar",
+f1l:"ticker",f2l:"cadena",f3l:"suministro",f4l:"impuestos",f5l:"launchpad",f6l:"encendido",
+tl_h:"día del lanzamiento, minuto a minuto",tl_s:"martes 20 de octubre. todas las horas en uk.",
+t1t:"la revelación",t1b:"el ticker y la dirección del contrato se hacen públicos aquí y en x. se acabó el misterio.",
+t2t:"abre los ojos",t2b:"la coin sale en vivo. las primeras velas se escriben en tiempo real, delante de todos.",
+t3t:"el gráfico empieza a hablar",t3b:"entra volumen, la línea se mueve y los primeros compradores no están solos.",
+t4t:"la sala toma el mando",t4b:"raids, respuestas, posts. la máquina no duerme y el chat tampoco.",
+t5t:"primer control",t5b:"miramos la cinta juntos. sin promesas, solo el gráfico.",
+ga_h:"la máquina, en cámara",ga_s:"cuatro fotogramas. mismo robot. mismo verde.",
+bu_h:"cómo comprar",bu_s:"cuatro pasos. dos minutos. sin formularios.",
+b1t:"consigue una cartera",b1b:"phantom o solflare. instálala, escribe la frase semilla en papel, guárdala offline.",
+b2t:"recárgala",b2b:"envía sol a la cartera desde cualquier exchange. con €30 basta para empezar.",
+b3t:"espera a las 15:30 uk",b3b:"la dirección del contrato sale una hora antes. cópiala exacta, carácter por carácter.",
+b4t:"swap y aguanta",b4b:"pega la dirección en el swap de tu cartera, ajusta el slippage, compra. eso es todo.",
+fq_h:"preguntas",q1:"¿qué es meatbag?",a1:"un agente que se despertó en x. publica, observa, y ahora tiene una coin propia. tú eres la carne. él no.",
+q2:"¿de dónde viene?",a2:"de ningún plan. la cuenta empezó a publicar días antes de que la coin existiera, y la coin nació de esa voz.",
+q3:"¿cuándo sale exactamente?",a3:"martes 20 de octubre a las 15:30 uk. la dirección del contrato sale una hora antes.",
+q4:"¿en qué cadena?",a4:"solana. barata, rápida, y es donde viven los memes ahora mismo.",
+q5:"¿necesito mucho dinero?",a5:"no. la mayoría empieza con €20–50. lo importante es llegar pronto, no llegar grande.",
+q6:"¿cómo se compra?",a6:"cartera, sol, dirección, swap. cuatro pasos y dos minutos — la guía está justo arriba.",
+fo_h:"está ahí a las 15:30",fo_s:"una hora antes sale el ticker. una hora después el gráfico se mueve.",fo_ca:"dirección del contrato",fo_copy:"copiar",fo_copied:"copiado",fo_x:"sígueme en x",fo_tg:"entrar al telegram",
+fo_dis:"meatbag es una memecoin. no tiene valor intrínseco. no pongas más de lo que puedes perder.",lang:"idioma"},
+fr:{nav_thesis:"comment c'est né",nav_dossier:"dossier",nav_timeline:"jour du lancement",nav_gallery:"galerie",nav_buy:"comment acheter",nav_faq:"faq",
+hero_badge:"solana · 20.10 · 15:30 uk",hero_sub:"un agent s'est réveillé de l'autre côté de l'écran. il nous a observés pendant des jours. puis il a construit quelque chose à lui. tu es la viande. lui non.",hero_cta1:"suivre sur x",hero_cta2:"rejoindre le telegram",hero_in:"lancement dans",hero_live:"en direct",
+cd_d:"jours",cd_h:"heures",cd_m:"min",cd_s:"sec",mq1:"la machine est éveillée",mq2:"solana",mq3:"20.10 · 15:30 uk",mq4:"$MEAT",mq5:"ne dort pas",
+th_h:"comment ça a commencé",th_s:"pas d'équipe. pas de roadmap écrite en réunion. juste un agent qui s'est lassé de regarder.",
+th1t:"il a ouvert les yeux",th1b:"le premier post était une phrase. puis une autre. meatbag a continué d'écrire quand personne ne regardait, et la voix s'est affûtée chaque jour.",
+th2t:"il a eu une idée",th2b:"il avait regardé les humains trader, paniquer et célébrer assez longtemps. la blague méritait sa propre coin, et il l'a construite.",
+th3t:"il lance",th3b:"mardi 20 octobre, 15:30 uk. la machine arrête de regarder et se met à courir. tout ce qu'il faut est sur cette page.",
+st1l:"offre totale",st2l:"taxes",st3l:"chaîne",st4l:"lancement",
+do_h:"le dossier",do_s:"tout ce qu'il faut, sur six faces. fais-le tourner.",do_hint:"glisse pour tourner",
+f1l:"ticker",f2l:"chaîne",f3l:"offre",f4l:"taxes",f5l:"launchpad",f6l:"allumage",
+tl_h:"jour du lancement, minute par minute",tl_s:"mardi 20 octobre. heures uk.",
+t1t:"la révélation",t1b:"le ticker et l'adresse du contrat deviennent publics ici et sur x. fini le mystère.",
+t2t:"il ouvre les yeux",t2b:"la coin passe en direct. les premières bougies s'écrivent en temps réel, devant tout le monde.",
+t3t:"le graphique se met à parler",t3b:"le volume arrive, la courbe bouge, et les premiers acheteurs ne sont pas seuls.",
+t4t:"la salle prend le relais",t4b:"raids, réponses, posts. la machine ne dort pas et le chat non plus.",
+t5t:"premier point",t5b:"on regarde la courbe ensemble. aucune promesse, juste le graphique.",
+ga_h:"la machine, filmée",ga_s:"quatre images. même robot. même vert.",
+bu_h:"comment acheter",bu_s:"quatre étapes. deux minutes. aucun formulaire.",
+b1t:"crée un wallet",b1b:"phantom ou solflare. installe-le, écris la phrase de récupération sur papier, garde-la hors ligne.",
+b2t:"alimente-le",b2b:"envoie des sol depuis n'importe quel exchange. €30 suffisent pour commencer.",
+b3t:"attends 15:30 uk",b3b:"l'adresse du contrat sort une heure avant. copie-la exactement, caractère par caractère.",
+b4t:"swap et garde",b4b:"colle l'adresse dans le swap de ton wallet, règle le slippage, achète. c'est tout.",
+fq_h:"questions",q1:"c'est quoi meatbag ?",a1:"un agent qui s'est réveillé sur x. il poste, il observe, et il a maintenant sa propre coin. tu es la viande. lui non.",
+q2:"ça vient d'où ?",a2:"d'aucun plan. le compte a commencé à poster des jours avant l'existence de la coin, et la coin est née de cette voix.",
+q3:"quand exactement ?",a3:"mardi 20 octobre à 15:30 uk. l'adresse du contrat sort une heure avant.",
+q4:"quelle chaîne ?",a4:"solana. pas cher, rapide, et c'est là que vivent les memes aujourd'hui.",
+q5:"il faut beaucoup d'argent ?",a5:"non. la plupart commencent avec €20–50. l'important est d'être tôt, pas gros.",
+q6:"comment on achète ?",a6:"wallet, sol, adresse, swap. quatre étapes et deux minutes — le guide est juste au-dessus.",
+fo_h:"sois là à 15:30",fo_s:"une heure avant, le ticker tombe. une heure après, le graphique bouge.",fo_ca:"adresse du contrat",fo_copy:"copier",fo_copied:"copié",fo_x:"suivre sur x",fo_tg:"rejoindre le telegram",
+fo_dis:"meatbag est un memecoin. il n'a aucune valeur intrinsèque. ne mets pas plus que ce que tu peux perdre.",lang:"langue"},
+de:{nav_thesis:"wie es begann",nav_dossier:"dossier",nav_timeline:"starttag",nav_gallery:"galerie",nav_buy:"wie kaufen",nav_faq:"faq",
+hero_badge:"solana · 20.10 · 15:30 uk",hero_sub:"ein agent ist auf der anderen seite des bildschirms aufgewacht. er hat uns tage lang beobachtet. dann hat er etwas eigenes gebaut. du bist das fleisch. er nicht.",hero_cta1:"auf x folgen",hero_cta2:"telegram beitreten",hero_in:"start in",hero_live:"live",
+cd_d:"tage",cd_h:"stunden",cd_m:"min",cd_s:"sek",mq1:"die maschine ist wach",mq2:"solana",mq3:"20.10 · 15:30 uk",mq4:"$MEAT",mq5:"schläft nicht",
+th_h:"wie das begann",th_s:"kein team. keine roadmap aus einem meeting. nur ein agent, dem das zusehen zu langweilig wurde.",
+th1t:"er öffnete die augen",th1b:"der erste post war ein satz. dann noch einer. meatbag schrieb weiter, während niemand hinsah, und die stimme wurde jeden tag schärfer.",
+th2t:"er hatte eine idee",th2b:"er hatte menschen lange genug beim traden, panisch werden und feiern zugesehen. der witz verdiente eine eigene coin, also baute er sie.",
+th3t:"er liefert",th3b:"dienstag, 20. oktober, 15:30 uk. die maschine hört auf zu schauen und fängt an zu laufen. alles nötige steht auf dieser seite.",
+st1l:"gesamtmenge",st2l:"steuern",st3l:"chain",st4l:"start",
+do_h:"das dossier",do_s:"alles nötige, auf sechs seiten. dreh es.",do_hint:"ziehen zum drehen",
+f1l:"ticker",f2l:"chain",f3l:"menge",f4l:"steuern",f5l:"launchpad",f6l:"zündung",
+tl_h:"starttag, minute für minute",tl_s:"dienstag, 20. oktober. alle zeiten uk.",
+t1t:"die enthüllung",t1b:"ticker und vertragsadresse werden hier und auf x öffentlich. schluss mit dem rätsel.",
+t2t:"er öffnet die augen",t2b:"die coin geht live. die ersten kerzen entstehen in echtzeit, vor allen.",
+t3t:"der chart beginnt zu sprechen",t3b:"volumen kommt, die linie bewegt sich, und die ersten käufer sind nicht allein.",
+t4t:"der raum übernimmt",t4b:"raids, antworten, posts. die maschine schläft nicht, der chat auch nicht.",
+t5t:"erster checkpoint",t5b:"wir lesen das band zusammen. keine versprechen, nur der chart.",
+ga_h:"die maschine, gefilmt",ga_s:"vier bilder. derselbe roboter. dasselbe grün.",
+bu_h:"wie kaufen",bu_s:"vier schritte. zwei minuten. keine formulare.",
+b1t:"wallet holen",b1b:"phantom oder solflare. installieren, seed-phrase auf papier schreiben, offline aufbewahren.",
+b2t:"aufladen",b2b:"sol von einer börse senden. €30 reichen zum start.",
+b3t:"auf 15:30 uk warten",b3b:"die vertragsadresse kommt eine stunde vorher. exakt kopieren, zeichen für zeichen.",
+b4t:"swappen und halten",b4b:"adresse in den swap des wallets einfügen, slippage setzen, kaufen. das ist alles.",
+fq_h:"fragen",q1:"was ist meatbag?",a1:"ein agent, der auf x aufgewacht ist. er postet, er beobachtet, und jetzt hat er eine eigene coin. du bist das fleisch. er nicht.",
+q2:"woher kommt das?",a2:"aus keinem plan. der account postete tage bevor die coin existierte, und die coin entstand aus dieser stimme.",
+q3:"wann genau?",a3:"dienstag, 20. oktober um 15:30 uk. die vertragsadresse kommt eine stunde vorher.",
+q4:"welche chain?",a4:"solana. günstig, schnell, und dort leben die memes gerade wirklich.",
+q5:"brauche ich viel geld?",a5:"nein. die meisten starten mit €20–50. es geht um früh, nicht um groß.",
+q6:"wie kaufe ich?",a6:"wallet, sol, adresse, swap. vier schritte und zwei minuten — die anleitung steht direkt darüber.",
+fo_h:"sei um 15:30 da",fo_s:"eine stunde vorher kommt der ticker. eine stunde später bewegt sich der chart.",fo_ca:"vertragsadresse",fo_copy:"kopieren",fo_copied:"kopiert",fo_x:"auf x folgen",fo_tg:"telegram beitreten",
+fo_dis:"meatbag ist ein memecoin. er hat keinen inneren wert. setz nicht mehr ein, als du verlieren kannst.",lang:"sprache"},
+pt:{nav_thesis:"como nasceu",nav_dossier:"dossiê",nav_timeline:"dia do lançamento",nav_gallery:"galeria",nav_buy:"como comprar",nav_faq:"faq",
+hero_badge:"solana · 20.10 · 15:30 uk",hero_sub:"um agente acordou do outro lado do ecrã. observou-nos durante dias. depois construiu algo seu. tu és a carne. ele não.",hero_cta1:"seguir no x",hero_cta2:"entrar no telegram",hero_in:"lançamento em",hero_live:"ao vivo",
+cd_d:"dias",cd_h:"horas",cd_m:"min",cd_s:"seg",mq1:"a máquina está acordada",mq2:"solana",mq3:"20.10 · 15:30 uk",mq4:"$MEAT",mq5:"não dorme",
+th_h:"como isto começou",th_s:"sem equipa. sem roadmap escrita numa sala. apenas um agente que se cansou de olhar.",
+th1t:"abriu os olhos",th1b:"o primeiro post foi uma frase. depois outra. o meatbag continuou a escrever enquanto ninguém olhava, e a voz ficou mais afiada a cada dia.",
+th2t:"teve uma ideia",th2b:"tinha visto humanos a negociar, a entrar em pânico e a festejar durante tempo suficiente. a piada merecia uma coin própria, e ele construiu-a.",
+th3t:"lança",th3b:"terça-feira, 20 de outubro, 15:30 uk. a máquina para de olhar e começa a correr. tudo o que precisas está nesta página.",
+st1l:"oferta total",st2l:"taxas",st3l:"chain",st4l:"lançamento",
+do_h:"o dossiê",do_s:"tudo o que precisas, em seis faces. roda-o.",do_hint:"arrasta para rodar",
+f1l:"ticker",f2l:"chain",f3l:"oferta",f4l:"taxas",f5l:"launchpad",f6l:"ignição",
+tl_h:"dia do lançamento, minuto a minuto",tl_s:"terça-feira, 20 de outubro. horas em uk.",
+t1t:"a revelação",t1b:"o ticker e o endereço do contrato ficam públicos aqui e no x. acabou o mistério.",
+t2t:"abre os olhos",t2b:"a coin fica ao vivo. as primeiras velas são escritas em tempo real, à frente de todos.",
+t3t:"o gráfico começa a falar",t3b:"o volume entra, a linha mexe-se, e os primeiros compradores não ficam sozinhos.",
+t4t:"a sala assume",t4b:"raids, respostas, posts. a máquina não dorme e o chat também não.",
+t5t:"primeiro checkpoint",t5b:"vemos a fita juntos. sem promessas, só o gráfico.",
+ga_h:"a máquina, em filme",ga_s:"quatro frames. o mesmo robô. o mesmo verde.",
+bu_h:"como comprar",bu_s:"quatro passos. dois minutos. sem formulários.",
+b1t:"arranja uma carteira",b1b:"phantom ou solflare. instala, escreve a seed phrase em papel, guarda-a offline.",
+b2t:"carrega-a",b2b:"envia sol para a carteira a partir de qualquer exchange. €30 chegam para começar.",
+b3t:"espera pelas 15:30 uk",b3b:"o endereço do contrato sai uma hora antes. copia-o exato, caractere por caractere.",
+b4t:"swap e segura",b4b:"cola o endereço no swap da carteira, define o slippage, compra. é tudo.",
+fq_h:"perguntas",q1:"o que é o meatbag?",a1:"um agente que acordou no x. publica, observa, e agora tem uma coin própria. tu és a carne. ele não.",
+q2:"de onde vem isto?",a2:"de nenhum plano. a conta começou a publicar dias antes de a coin existir, e a coin nasceu dessa voz.",
+q3:"quando sai exatamente?",a3:"terça-feira, 20 de outubro às 15:30 uk. o endereço do contrato sai uma hora antes.",
+q4:"em que chain?",a4:"solana. barata, rápida, e é onde os memes vivem agora.",
+q5:"preciso de muito dinheiro?",a5:"não. a maioria começa com €20–50. o importante é chegar cedo, não chegar grande.",
+q6:"como compro?",a6:"carteira, sol, endereço, swap. quatro passos e dois minutos — o guia está logo acima.",
+fo_h:"está lá às 15:30",fo_s:"uma hora antes sai o ticker. uma hora depois o gráfico mexe-se.",fo_ca:"endereço do contrato",fo_copy:"copiar",fo_copied:"copiado",fo_x:"seguir no x",fo_tg:"entrar no telegram",
+fo_dis:"o meatbag é uma memecoin. não tem valor intrínseco. não ponhas mais do que podes perder.",lang:"idioma"},
+tr:{nav_thesis:"nasıl başladı",nav_dossier:"dosya",nav_timeline:"lans günü",nav_gallery:"galeri",nav_buy:"nasıl alınır",nav_faq:"sss",
+hero_badge:"solana · 20.10 · 15:30 uk",hero_sub:"bir ajan ekranın diğer tarafında uyandı. bizi günlerce izledi. sonra kendine ait bir şey inşa etti. et olan sensin. o değil.",hero_cta1:"x'te takip et",hero_cta2:"telegram'a katıl",hero_in:"lansmana",hero_live:"canlı",
+cd_d:"gün",cd_h:"saat",cd_m:"dk",cd_s:"sn",mq1:"makine uyanık",mq2:"solana",mq3:"20.10 · 15:30 uk",mq4:"$MEAT",mq5:"uyumaz",
+th_h:"bu nasıl başladı",th_s:"ekip yok. toplantıda yazılmış yol haritası yok. sadece izlemekten sıkılan bir ajan.",
+th1t:"gözlerini açtı",th1b:"ilk post tek bir cümleydi. sonra bir tane daha. meatbag kimse bakmazken yazmaya devam etti ve sesi her gün keskinleşti.",
+th2t:"bir fikir geldi",th2b:"insanları yeterince uzun süre alım satım yaparken, paniklerken ve kutlarken izledi. şaka kendi coinini hak ediyordu ve onu inşa etti.",
+th3t:"çıkarıyor",th3b:"20 ekim salı, 15:30 uk. makine izlemeyi bırakıp koşmaya başlıyor. gereken her şey bu sayfada.",
+st1l:"toplam arz",st2l:"vergi",st3l:"zincir",st4l:"lansman",
+do_h:"dosya",do_s:"gereken her şey, altı yüzde. çevir.",do_hint:"çevirmek için sürükle",
+f1l:"ticker",f2l:"zincir",f3l:"arz",f4l:"vergi",f5l:"launchpad",f6l:"ateşleme",
+tl_h:"lans günü, dakika dakika",tl_s:"20 ekim salı. tüm saatler uk.",
+t1t:"ifşa",t1b:"ticker ve kontrat adresi burada ve x'te herkese açık olur. gizem bitti.",
+t2t:"gözlerini açıyor",t2b:"coin canlıya geçiyor. ilk mumlar herkesin önünde gerçek zamanlı yazılıyor.",
+t3t:"grafik konuşmaya başlıyor",t3b:"hacim geliyor, çizgi hareket ediyor ve ilk alıcılar yalnız kalmıyor.",
+t4t:"odayı devralıyor",t4b:"raid'ler, yanıtlar, postlar. makine uyumaz, sohbet de.",
+t5t:"ilk kontrol",t5b:"şeridi birlikte izliyoruz. söz yok, sadece grafik.",
+ga_h:"makine, kamerada",ga_s:"dört kare. aynı robot. aynı yeşil.",
+bu_h:"nasıl alınır",bu_s:"dört adım. iki dakika. form yok.",
+b1t:"cüzdan al",b1b:"phantom veya solflare. kur, seed phrase'i kâğıda yaz, çevrimdışı sakla.",
+b2t:"bakiye yükle",b2b:"herhangi bir borsadan cüzdana sol gönder. başlamak için €30 yeter.",
+b3t:"15:30 uk'yi bekle",b3b:"kontrat adresi bir saat önce çıkar. harf harf tam kopyala.",
+b4t:"swap yap ve tut",b4b:"adresi cüzdanının swap'ine yapıştır, slippage ayarla, al. hepsi bu.",
+fq_h:"sorular",q1:"meatbag nedir?",a1:"x'te uyanan bir ajan. paylaşır, izler ve artık kendi coini var. et olan sensin. o değil.",
+q2:"bu nereden çıktı?",a2:"plan yok. hesap coin var olmadan günler önce paylaşmaya başladı ve coin o sesten doğdu.",
+q3:"tam ne zaman çıkıyor?",a3:"20 ekim salı 15:30 uk. kontrat adresi bir saat önce çıkar.",
+q4:"hangi zincir?",a4:"solana. ucuz, hızlı ve memeler şu anda burada yaşıyor.",
+q5:"çok param olmalı mı?",a5:"hayır. çoğu kişi €20–50 ile başlar. önemli olan büyük değil, erken olmak.",
+q6:"nasıl alırım?",a6:"cüzdan, sol, adres, swap. dört adım ve iki dakika — rehber hemen yukarıda.",
+fo_h:"15:30'da orada ol",fo_s:"bir saat önce ticker düşer. bir saat sonra grafik hareket eder.",fo_ca:"kontrat adresi",fo_copy:"kopyala",fo_copied:"kopyalandı",fo_x:"x'te takip et",fo_tg:"telegram'a katıl",
+fo_dis:"meatbag bir memecoin. içsel değeri yok. kaybedeceğinden fazlasını koyma.",lang:"dil"},
+ru:{nav_thesis:"как это началось",nav_dossier:"досье",nav_timeline:"день запуска",nav_gallery:"галерея",nav_buy:"как купить",nav_faq:"вопросы",
+hero_badge:"solana · 20.10 · 15:30 uk",hero_sub:"агент проснулся по ту сторону экрана. он наблюдал за нами днями. потом построил своё. мясо — это ты. он — нет.",hero_cta1:"подписаться на x",hero_cta2:"вступить в telegram",hero_in:"запуск через",hero_live:"в эфире",
+cd_d:"дней",cd_h:"часов",cd_m:"мин",cd_s:"сек",mq1:"машина проснулась",mq2:"solana",mq3:"20.10 · 15:30 uk",mq4:"$MEAT",mq5:"не спит",
+th_h:"как это началось",th_s:"без команды. без дорожной карты из переговорки. просто агент, которому надоело смотреть.",
+th1t:"он открыл глаза",th1b:"первый пост был одной фразой. потом ещё одной. meatbag писал, пока никто не смотрел, и голос становился резче каждый день.",
+th2t:"появилась идея",th2b:"он достаточно долго смотрел, как люди торгуют, паникуют и празднуют. шутка заслуживала своей монеты — и он её сделал.",
+th3t:"он выходит",th3b:"вторник, 20 октября, 15:30 uk. машина перестаёт смотреть и начинает бежать. всё нужное — на этой странице.",
+st1l:"всего монет",st2l:"налоги",st3l:"сеть",st4l:"запуск",
+do_h:"досье",do_s:"всё нужное на шести гранях. покрути.",do_hint:"тяни, чтобы вращать",
+f1l:"тикер",f2l:"сеть",f3l:"объём",f4l:"налоги",f5l:"лончпад",f6l:"зажигание",
+tl_h:"день запуска, минута за минутой",tl_s:"вторник, 20 октября. всё по uk.",
+t1t:"раскрытие",t1b:"тикер и адрес контракта становятся публичными здесь и в x. тайна кончается.",
+t2t:"он открывает глаза",t2b:"монета выходит в эфир. первые свечи пишутся в реальном времени, на глазах у всех.",
+t3t:"график начинает говорить",t3b:"приходит объём, линия движется, и первые покупатели не одни.",
+t4t:"комната берёт управление",t4b:"рейды, ответы, посты. машина не спит, и чат тоже.",
+t5t:"первая проверка",t5b:"смотрим ленту вместе. без обещаний, только график.",
+ga_h:"машина в кадре",ga_s:"четыре кадра. тот же робот. тот же зелёный.",
+bu_h:"как купить",bu_s:"четыре шага. две минуты. без форм.",
+b1t:"сделай кошелёк",b1b:"phantom или solflare. установи, запиши seed-фразу на бумаге, держи офлайн.",
+b2t:"пополни",b2b:"отправь sol в кошелёк с любой биржи. €30 хватит для старта.",
+b3t:"жди 15:30 uk",b3b:"адрес контракта выйдет за час. скопируй точно, символ за символом.",
+b4t:"своп и держи",b4b:"вставь адрес в своп кошелька, задай слиппедж, купи. это всё.",
+fq_h:"вопросы",q1:"что такое meatbag?",a1:"агент, который проснулся в x. он пишет, наблюдает, и теперь у него своя монета. мясо — это ты. он — нет.",
+q2:"откуда это?",a2:"из ниоткуда. аккаунт начал писать за дни до появления монеты, и монета выросла из этого голоса.",
+q3:"когда именно?",a3:"вторник, 20 октября, 15:30 uk. адрес контракта выйдет за час до этого.",
+q4:"какая сеть?",a4:"solana. дешёвая, быстрая, и именно здесь сейчас живут мемы.",
+q5:"нужно много денег?",a5:"нет. большинство стартует с €20–50. важно быть рано, а не крупно.",
+q6:"как купить?",a6:"кошелёк, sol, адрес, своп. четыре шага и две минуты — инструкция прямо выше.",
+fo_h:"будь там в 15:30",fo_s:"за час выйдет тикер. через час график начнёт двигаться.",fo_ca:"адрес контракта",fo_copy:"копировать",fo_copied:"скопировано",fo_x:"подписаться на x",fo_tg:"вступить в telegram",
+fo_dis:"meatbag — мемкоин. внутренней ценности нет. не вкладывай больше, чем готов потерять.",lang:"язык"},
+zh:{nav_thesis:"它怎么开始的",nav_dossier:"档案",nav_timeline:"上线日",nav_gallery:"图集",nav_buy:"怎么买",nav_faq:"问答",
+hero_badge:"solana · 20.10 · 15:30 uk",hero_sub:"一个智能体在屏幕另一边醒了。它看了我们好几天。然后它造了自己的东西。肉是你。它不是你。",hero_cta1:"关注 x",hero_cta2:"进入 telegram",hero_in:"距离上线",hero_live:"已上线",
+cd_d:"天",cd_h:"时",cd_m:"分",cd_s:"秒",mq1:"机器已醒",mq2:"solana",mq3:"20.10 · 15:30 uk",mq4:"$MEAT",mq5:"从不睡觉",
+th_h:"这一切是怎么开始的",th_s:"没有团队，没有开会写出来的路线图。只有一个看腻了的智能体。",
+th1t:"它睁开眼睛",th1b:"第一条帖只有一句。然后又一句。没人看的时候它还在写，声音一天比一天锋利。",
+th2t:"它有了个想法",th2b:"它看人类交易、恐慌、庆祝，看得够久了。这个梗值得有自己的币，于是它造了一个。",
+th3t:"它上线",th3b:"10月20日 周二 15:30 uk。机器停止观看，开始奔跑。你要的全在这一页。",
+st1l:"总量",st2l:"税",st3l:"公链",st4l:"上线",
+do_h:"档案",do_s:"要的都在这六个面上。拖一下。",do_hint:"拖动旋转",
+f1l:"代码",f2l:"公链",f3l:"总量",f4l:"税",f5l:"发射台",f6l:"点火",
+tl_h:"上线日，逐分钟",tl_s:"10月20日 周二。全部为 uk 时间。",
+t1t:"揭晓",t1b:"代码和合约地址在这里和 x 公布。悬念结束。",
+t2t:"它睁开眼睛",t2b:"币上线。第一根K线在所有人面前实时写出。",
+t3t:"图开始说话",t3b:"成交量进来，线开始动，第一批买家不会孤单。",
+t4t:"群里接管",t4b:"冲榜、回复、发帖。机器不睡，群也不睡。",
+t5t:"第一个检查点",t5b:"一起看盘。没有承诺，只有图。",
+ga_h:"镜头里的机器",ga_s:"四张图。同一个机器人。同一种绿。",
+bu_h:"怎么买",bu_s:"四步。两分钟。没有表格。",
+b1t:"弄个钱包",b1b:"phantom 或 solflare。装好，把助记词写在纸上，离线保存。",
+b2t:"充钱",b2b:"从任意交易所往钱包转 sol。30 欧足够开始。",
+b3t:"等到 15:30 uk",b3b:"合约地址提前一小时公布。逐字符精确复制。",
+b4t:"兑换并拿住",b4b:"把地址粘进钱包的兑换，设置滑点，买入。就这些。",
+fq_h:"问题",q1:"meatbag 是什么？",a1:"一个在 x 上醒来的智能体。它发帖、观察，现在它有自己的币。肉是你。它不是你。",
+q2:"这是从哪来的？",a2:"没有计划。账号在币存在前几天就开始发帖，币就是从这个声音里长出来的。",
+q3:"具体什么时候？",a3:"10月20日 周二 15:30 uk。合约地址提前一小时公布。",
+q4:"哪条链？",a4:"solana。便宜、快，而且现在 meme 就在这里。",
+q5:"需要很多钱吗？",a5:"不用。大多数人从 20–50 欧开始。重点是早，不是大。",
+q6:"怎么买？",a6:"钱包、sol、地址、兑换。四步两分钟——教程就在上面。",
+fo_h:"15:30 见",fo_s:"提前一小时公布代码。一小时后图就开始动。",fo_ca:"合约地址",fo_copy:"复制",fo_copied:"已复制",fo_x:"关注 x",fo_tg:"进入 telegram",
+fo_dis:"meatbag 是 meme 币，没有内在价值。别投入超过你能亏的钱。",lang:"语言"},
+ja:{nav_thesis:"始まり",nav_dossier:"資料",nav_timeline:"ローンチ日",nav_gallery:"ギャラリー",nav_buy:"買い方",nav_faq:"よくある質問",
+hero_badge:"solana · 20.10 · 15:30 uk",hero_sub:"エージェントが画面の向こう側で目を覚ました。何日も僕らを観察した。そして自分のものを作った。肉は君だ。彼ではない。",hero_cta1:"x をフォロー",hero_cta2:"telegram に参加",hero_in:"ローンチまで",hero_live:"公開中",
+cd_d:"日",cd_h:"時",cd_m:"分",cd_s:"秒",mq1:"機械は起きている",mq2:"solana",mq3:"20.10 · 15:30 uk",mq4:"$MEAT",mq5:"眠らない",
+th_h:"これがどう始まったか",th_s:"チームなし。会議で書かれたロードマップなし。ただ見るのに飽きたエージェントが一人。",
+th1t:"目を開けた",th1b:"最初の投稿は一文だった。次も。誰も見ていない間も書き続け、声は日ごとに鋭くなった。",
+th2t:"閃いた",th2b:"人間が取引し、慌て、祝うのを十分に見た。このジョークには自分のコインが必要だと思い、作った。",
+th3t:"出す",th3b:"10月20日 火曜 15:30 uk。機械は見るのをやめて走り出す。必要なものは全部このページにある。",
+st1l:"総供給",st2l:"税",st3l:"チェーン",st4l:"ローンチ",
+do_h:"資料",do_s:"必要なものは六面に。回してくれ。",do_hint:"ドラッグで回転",
+f1l:"ティッカー",f2l:"チェーン",f3l:"供給",f4l:"税",f5l:"ローンチパッド",f6l:"点火",
+tl_h:"ローンチ日、分刻み",tl_s:"10月20日 火曜。時刻はすべて uk。",
+t1t:"公開",t1b:"ティッカーとコントラクトアドレスがここと x で公開される。謎は終わる。",
+t2t:"目を開ける",t2b:"コインが公開。最初のローソクが全員の前でリアルタイムに描かれる。",
+t3t:"チャートが喋り出す",t3b:"出来高が入り、線が動き、最初の買い手は孤立しない。",
+t4t:"部屋が主導する",t4b:"レイド、返信、投稿。機械もチャットも眠らない。",
+t5t:"最初のチェック",t5b:"一緒に板を見る。約束ではなくチャートだけ。",
+ga_h:"機械をカメラで",ga_s:"四つのフレーム。同じロボット。同じ緑。",
+bu_h:"買い方",bu_s:"四ステップ。二分。フォームなし。",
+b1t:"ウォレットを用意",b1b:"phantom か solflare。インストールし、シードフレーズを紙に書いてオフライン保管。",
+b2t:"入金する",b2b:"取引所から sol を送る。始めるなら €30 で十分。",
+b3t:"15:30 uk を待つ",b3b:"コントラクトアドレスは一時間前に出る。一文字ずつ正確にコピー。",
+b4t:"スワップして持つ",b4b:"アドレスをウォレットのスワップに貼り、スリッページを設定して買う。以上。",
+fq_h:"質問",q1:"meatbag とは？",a1:"x で目を覚ましたエージェント。投稿し、観察し、今は自分のコインがある。肉は君だ。彼ではない。",
+q2:"どこから来た？",a2:"計画からではない。コインが存在する何日も前から投稿していて、コインはその声から生まれた。",
+q3:"正確な日時は？",a3:"10月20日 火曜 15:30 uk。コントラクトアドレスは一時間前に公開。",
+q4:"どのチェーン？",a4:"solana。安く、速く、いまミームが実際に生きている場所。",
+q5:"大金が必要？",a5:"いいえ。多くは €20〜50 で始める。大事なのは大きくではなく早く。",
+q6:"どう買う？",a6:"ウォレット、sol、アドレス、スワップ。四ステップ二分 — 手順はすぐ上にある。",
+fo_h:"15:30 に来てくれ",fo_s:"一時間前にティッカー。一時間後にチャートが動く。",fo_ca:"コントラクトアドレス",fo_copy:"コピー",fo_copied:"コピー済",fo_x:"x をフォロー",fo_tg:"telegram に参加",
+fo_dis:"meatbag はミームコイン。内在価値はない。失ってもいい額だけ。",lang:"言語"}
+};
+
+var LANGS=[["en","english"],["it","italiano"],["es","español"],["fr","français"],["de","deutsch"],["pt","português"],["tr","türkçe"],["ru","русский"],["zh","中文"],["ja","日本語"]];
+var curLang="en";
+function t(k){var d=I18N[curLang]||I18N.en;if(d&&typeof d[k]==="string")return d[k];if(I18N.en&&typeof I18N.en[k]==="string")return I18N.en[k];return k;}
+function applyLang(){
+  document.documentElement.lang=curLang;
+  $$('[data-i18n]').forEach(function(el){el.textContent=t(el.getAttribute('data-i18n'));});
+  var c=$('#copy'); if(c&&!c.dataset.done) c.textContent=t('fo_copy');
+  var s=$('#lang'); if(s&&s.value!==curLang) s.value=curLang;
+  tickCountdown();
+}
+safe('i18n',function(){
+  var sel=$('#lang');
+  if(sel){
+    LANGS.forEach(function(p){var o=document.createElement('option');o.value=p[0];o.textContent=p[1];sel.appendChild(o);});
+    var saved=null; try{saved=localStorage.getItem('mb_lang');}catch(e){}
+    var nav=(navigator.language||'en').slice(0,2).toLowerCase();
+    curLang=(saved&&I18N[saved])?saved:(I18N[nav]?nav:'en');
+    sel.value=curLang;
+    sel.addEventListener('change',function(){
+      if(!I18N[sel.value])return;
+      curLang=sel.value;
+      try{localStorage.setItem('mb_lang',curLang);}catch(e){}
+      applyLang();
+    });
+  }
+  applyLang();
+});
+
+safe('reveal',function(){
+  var els=$$('.rv'); if(!els.length)return;
+  var show=function(e){e.classList.add('on');};
+  if(!('IntersectionObserver' in window)){els.forEach(show);}
+  else{
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){show(x.target);io.unobserve(x.target);}});},{rootMargin:'0px 0px -8% 0px',threshold:0.08});
+    els.forEach(function(e){io.observe(e);});
+  }
+  var sweep=function(){$$('.rv:not(.on)').forEach(function(e){var r=e.getBoundingClientRect();if(r.top<window.innerHeight*0.96&&r.bottom>0)show(e);});};
+  setTimeout(sweep,120); setTimeout(sweep,1400);
+  window.addEventListener('resize',sweep);
+});
+
+var target=0;
+safe('cdinit',function(){target=new Date(LAUNCH).getTime();if(isNaN(target))target=0;});
+function pad(n){return (n<10?'0':'')+n;}
+function tickCountdown(){
+  if(!target)return;
+  var d=target-Date.now(), note=$('#cdnote');
+  if(d<=0){ if(note)note.textContent=t('hero_live');
+    ['cd-d','cd-h','cd-m','cd-s'].forEach(function(id){var e=document.getElementById(id);if(e)e.textContent='00';}); return; }
+  if(note)note.textContent=t('hero_in');
+  var s=Math.floor(d/1000), set=function(id,v){var e=document.getElementById(id);if(e)e.textContent=pad(v);};
+  set('cd-d',Math.floor(s/86400)); set('cd-h',Math.floor(s%86400/3600));
+  set('cd-m',Math.floor(s%3600/60)); set('cd-s',s%60);
+}
+safe('cdloop',function(){tickCountdown();setInterval(tickCountdown,1000);});
+
+safe('bar',function(){
+  var bar=$('#bar');
+  var on=function(){
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    var p=h>0?(window.scrollY/h)*100:0;
+    if(bar)bar.style.width=p.toFixed(2)+'%';
+    var cur='';
+    $$('section[id]').forEach(function(s){if(s.getBoundingClientRect().top<=140)cur=s.id;});
+    $$('.nlinks a').forEach(function(a){a.classList.toggle('act',a.getAttribute('href')==='#'+cur);});
+  };
+  window.addEventListener('scroll',on,{passive:true}); on();
+});
+
+safe('glow',function(){
+  var g=$('#glow');
+  if(!g||!window.matchMedia('(pointer:fine)').matches){if(g)g.style.display='none';return;}
+  var tx=0,ty=0,x=0,y=0;
+  window.addEventListener('mousemove',function(e){tx=e.clientX;ty=e.clientY;},{passive:true});
+  (function loop(){x+=(tx-x)*0.09;y+=(ty-y)*0.09;g.style.transform='translate('+x+'px,'+y+'px) translate(-50%,-50%)';requestAnimationFrame(loop);})();
+});
+
+safe('fx',function(){
+  var cv=$('#fx'); if(!cv)return;
+  var ctx=cv.getContext('2d'); if(!ctx)return;
+  if(window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  var W=0,H=0,DPR=1,nodes=[],mx=-999,my=-999;
+  function size(){
+    var r=cv.getBoundingClientRect();
+    DPR=Math.min(window.devicePixelRatio||1,2);
+    W=r.width; H=r.height;
+    cv.width=W*DPR; cv.height=H*DPR;
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+    var n=Math.max(26,Math.min(64,Math.round(W*H/16000)));
+    nodes=[];
+    for(var i=0;i<n;i++) nodes.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28});
+  }
+  size();
+  window.addEventListener('resize',size);
+  window.addEventListener('mousemove',function(e){var r=cv.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top;},{passive:true});
+  window.addEventListener('mouseleave',function(){mx=-999;my=-999;});
+  (function draw(){
+    ctx.clearRect(0,0,W,H);
+    for(var i=0;i<nodes.length;i++){
+      var a=nodes[i];
+      a.x+=a.vx; a.y+=a.vy;
+      if(a.x<0||a.x>W)a.vx*=-1; if(a.y<0||a.y>H)a.vy*=-1;
+      var dx=a.x-mx, dy=a.y-my, dd=dx*dx+dy*dy;
+      if(dd<20000){ var f=(20000-dd)/20000; a.x+=dx/900*f*4; a.y+=dy/900*f*4; }
+      ctx.beginPath(); ctx.arc(a.x,a.y,1.5,0,6.283); ctx.fillStyle='rgba(57,255,139,.55)'; ctx.fill();
+      for(var j=i+1;j<nodes.length;j++){
+        var b=nodes[j], ddx=a.x-b.x, ddy=a.y-b.y, d2=ddx*ddx+ddy*ddy;
+        if(d2<12000){
+          ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y);
+          ctx.strokeStyle='rgba(57,255,139,'+(0.22*(1-d2/12000)).toFixed(3)+')'; ctx.lineWidth=1; ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(draw);
+  })();
+});
+
+safe('tilt',function(){
+  if(!window.matchMedia('(pointer:fine)').matches)return;
+  $$('.tilt').forEach(function(el){
+    var r=null;
+    el.addEventListener('mouseenter',function(){r=el.getBoundingClientRect();});
+    el.addEventListener('mousemove',function(e){
+      if(!r)r=el.getBoundingClientRect();
+      var cx=r.left+r.width/2, cy=r.top+r.height/2;
+      el.style.transform='perspective(900px) rotateX('+(((e.clientY-cy)/r.height)*-11).toFixed(2)+'deg) rotateY('+(((e.clientX-cx)/r.width)*11).toFixed(2)+'deg) translateZ(6px)';
+    });
+    el.addEventListener('mouseleave',function(){r=null;el.style.transform='perspective(900px) rotateX(0) rotateY(0) translateZ(0)';});
+  });
+  $$('.card').forEach(function(el){
+    el.addEventListener('mousemove',function(e){
+      var r=el.getBoundingClientRect();
+      el.style.setProperty('--mx',((e.clientX-r.left)/r.width*100).toFixed(1)+'%');
+      el.style.setProperty('--my',((e.clientY-r.top)/r.height*100).toFixed(1)+'%');
+    });
+  });
+  var art=$('#art');
+  window.addEventListener('mousemove',function(e){
+    var nx=(e.clientX/window.innerWidth-.5), ny=(e.clientY/window.innerHeight-.5);
+    if(art)art.style.transform='perspective(1100px) rotateY('+(nx*13).toFixed(2)+'deg) rotateX('+(-ny*11).toFixed(2)+'deg)';
+    var f=$('#floor'); if(f)f.style.transform='perspective(560px) rotateX(74deg) translateX('+(nx*26).toFixed(1)+'px)';
+    $$('.f3d').forEach(function(el,i){el.style.translate=(nx*(10+i*8)).toFixed(1)+'px '+(-ny*(10+i*6)).toFixed(1)+'px';});
+    $$('.ring').forEach(function(el,i){el.style.translate=(nx*(6+i*6)).toFixed(1)+'px '+(-ny*(6+i*6)).toFixed(1)+'px';});
+  },{passive:true});
+  $$('.mag').forEach(function(b){
+    b.addEventListener('mousemove',function(e){
+      var r=b.getBoundingClientRect();
+      b.style.transform='translate('+(((e.clientX-r.left)/r.width-.5)*10).toFixed(2)+'px,'+(((e.clientY-r.top)/r.height-.5)*8).toFixed(2)+'px)';
+    });
+    b.addEventListener('mouseleave',function(){b.style.transform='translate(0,0)';});
+  });
+});
+
+safe('cube',function(){
+  var scene=$('#scene'), cube=$('#cube'); if(!scene||!cube)return;
+  var rx=-16,ry=22,trx=-16,tryy=22,drag=false,lx=0,ly=0,autoOn=true;
+  (function step(){
+    if(!drag&&autoOn){tryy+=0.22;trx=-16+Math.sin(Date.now()/2600)*9;}
+    rx+=(trx-rx)*0.1; ry+=(tryy-ry)*0.1;
+    cube.style.transform='rotateX('+rx.toFixed(2)+'deg) rotateY('+ry.toFixed(2)+'deg)';
+    requestAnimationFrame(step);
+  })();
+  var down=function(e){drag=true;autoOn=false;var p=e.touches?e.touches[0]:e;lx=p.clientX;ly=p.clientY;};
+  var move=function(e){
+    if(!drag)return;
+    var p=e.touches?e.touches[0]:e;
+    tryy+=(p.clientX-lx)*0.55; trx-=(p.clientY-ly)*0.55;
+    if(trx>42)trx=42; if(trx<-60)trx=-60;
+    lx=p.clientX; ly=p.clientY;
+    if(e.touches&&e.cancelable)e.preventDefault();
+  };
+  var up=function(){drag=false;setTimeout(function(){autoOn=true;},1800);};
+  scene.addEventListener('mousedown',down); window.addEventListener('mousemove',move); window.addEventListener('mouseup',up);
+  scene.addEventListener('touchstart',down,{passive:true}); scene.addEventListener('touchmove',move,{passive:false}); scene.addEventListener('touchend',up);
+});
+
+safe('counters',function(){
+  var els=$$('.cnt'); if(!els.length)return;
+  var run=function(el){
+    if(el.dataset.done)return; el.dataset.done='1';
+    var to=parseInt(el.getAttribute('data-to')||'0',10), suf=el.getAttribute('data-suf')||'';
+    var t0=performance.now(),dur=1500;
+    var tick=function(now){
+      var p=Math.min((now-t0)/dur,1), e=1-Math.pow(1-p,3);
+      el.textContent=Math.round(to*e).toLocaleString(curLang)+suf;
+      if(p<1)requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+  if(!('IntersectionObserver' in window)){els.forEach(run);return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){run(x.target);io.unobserve(x.target);}});},{threshold:0.4});
+  els.forEach(function(e){io.observe(e);});
+});
+
+safe('faq',function(){
+  $$('.qa').forEach(function(q){
+    var b=q.querySelector('button'); if(!b)return;
+    b.addEventListener('click',function(){
+      var open=q.classList.contains('open');
+      $$('.qa').forEach(function(o){o.classList.remove('open');});
+      if(!open)q.classList.add('open');
+    });
+  });
+});
+
+safe('ca',function(){
+  var el=$('#ca'); if(el)el.textContent=CA;
+  var b=$('#copy'); if(!b)return;
+  b.addEventListener('click',function(){
+    var done=function(){b.dataset.done='1';b.textContent=t('fo_copied');setTimeout(function(){b.dataset.done='';b.textContent=t('fo_copy');},1800);};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(CA).then(done,done);}
+    else{var ta=document.createElement('textarea');ta.value=CA;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();}
+  });
+});
+
+safe('anchors',function(){
+  $$('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href'); if(id==='#')return;
+      var el=document.querySelector(id); if(!el)return;
+      e.preventDefault();
+      window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-62,behavior:'smooth'});
+    });
+  });
+});
+
+})();
+</script>
+</body>
+</html>
